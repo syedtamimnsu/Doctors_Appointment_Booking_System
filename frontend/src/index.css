@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+
+/* this use for show navbar active which i click. show underline bottom of this element
+if ckick home then underline show in home. if contact click then show in contact */
+.active hr{
+    @apply block;
+}

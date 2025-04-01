@@ -1,37 +1,17 @@
-// /** @type {import('tailwindcss').Config} */
-
-// export default{
-//     content: [
-//         "./index.html",
-//         "./src/**/*.{js,ts,jsx,tsx",
-//     ],
-
-//     theme: {
-//         extend: {
-//             colors: {
-//                 'primary':"#5f6FFF"
-//             }
-//         },
-//     },
-
-//     plugins: [],
-// }
-
-
 /** @type {import('tailwindcss').Config} */
-
 export default {
     content: [
       "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",  // 🛠️ FIXED: Closing curly brace added
+      "./src/**/*.{js,ts,jsx,tsx}",  // ✅ Fixed: Added missing `}`
     ],
     theme: {
       extend: {
         colors: {
-          primary: "#5f6FFF",
+          primary: "#5f6FFF", // ✅ Your custom color
         },
       },
     },
     plugins: [],
   };
   
+

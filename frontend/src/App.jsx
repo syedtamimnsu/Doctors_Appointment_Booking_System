@@ -4,11 +4,12 @@ import Navbar from './components/Navbar'
 import './index.css'
 import About from './pages/About'
 import Appointment from './pages/Appointment'
-import Contract from './pages/Contract'
+import Contact from './pages/Contact'
 import Doctors from './pages/Doctors'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import MyProfile from './pages/MyProfile'
+
 
 
 
@@ -19,7 +20,7 @@ const App = () => {
       {/* This is for navbar whic will showed in all pages.
       so its used before the routes */}
 
-      <Navbar />  
+      <Navbar />
 
 
 
@@ -32,7 +33,8 @@ const App = () => {
         <Route path='/about' element={<About />}/>
         <Route path='/my-profile' element={<MyProfile />}/>
         <Route path='/appointment/:doctID' element={<Appointment />}/>
-        <Route path='/contact' element={<Contract />}/>
+        <Route path='/contact' element={<Contact />} />
+       
         
       </Routes>
       
