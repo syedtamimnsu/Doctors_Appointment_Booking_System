@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './index.css'
 import About from './pages/About'
@@ -34,9 +35,14 @@ const App = () => {
         <Route path='/my-profile' element={<MyProfile />}/>
         <Route path='/appointment/:doctID' element={<Appointment />}/>
         <Route path='/contact' element={<Contact />} />
-       
-        
+    
       </Routes>
+
+
+      {/* use footer out of routes tag. 
+      so that it will visible in all pages */}
+
+      <Footer/>
       
     </div>
     
