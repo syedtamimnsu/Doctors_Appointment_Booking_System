@@ -6,6 +6,7 @@ const Banner = () => {
 
     const navigate = useNavigate();
 
+    // comment add for git commit
 
 
   return (
