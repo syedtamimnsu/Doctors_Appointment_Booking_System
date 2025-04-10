@@ -16,3 +16,9 @@ if ckick home then underline show in home. if contact click then show in contact
 ::-webkit-scrollbar{
     @apply hidden;
 }
+
+@media (max-width:740px){
+    .active p{
+        @apply text-white bg-[#5f6FFF]
+    }
+}
