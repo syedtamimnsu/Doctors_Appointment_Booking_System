@@ -1,8 +1,14 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
+import Sidevar from './components/Sidevar';
 import { AdminContext } from './context/AdminContext';
+import AddDoctor from './pages/Admin/AddDoctor';
+import AllApointments from './pages/Admin/AllApointments';
+import Dashboard from './pages/Admin/Dashboard';
+import DoctorsList from './pages/Admin/DoctorsList';
 import Login from './pages/Login';
 
 const App = () => {
@@ -13,6 +19,18 @@ const App = () => {
     <div className='bg-[#F8F9FD]'>
       <ToastContainer/>
       <Navbar/>
+
+      <div className='flex items-start'>
+        <Sidevar/>
+
+        <Routes>
+          <Route path='/' element={<></>} />
+          <Route path='/admin-dashboard' element={<Dashboard />} />
+          <Route path='/doctors-list' element={<DoctorsList />} />
+          <Route path='/all-appointments' element={<AllApointments />} />
+          <Route path='/add-doctor' element={<AddDoctor />} />
+        </Routes>
+      </div>
     </div>
   ) : (
     <>
