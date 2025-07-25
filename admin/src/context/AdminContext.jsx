@@ -2,6 +2,7 @@ import axios from "axios";
 import { createContext, useState } from "react";
 import { toast } from 'react-toastify';
 
+
 export const AdminContext = createContext()
 
 // const backendUrl = import.meta.env.VITE_BACKEND_URL
@@ -29,10 +30,31 @@ const AdminContextProvider = (props) => {
         }
     }
 
+
+    //for change doctor availability
+    const changeAvailability = async (docId) => {
+        try {
+
+            const {data} = await axios.post(`${backendUrl}/api/admin/change-availability`, {docId}, {headers:{aToken}})
+
+            if(data.success){
+                toast.success(data.message)
+                getAllDoctors()
+            } else{
+                toast.error(data.message)
+            }
+            
+        } catch (error) {
+            toast.error(error.message)
+            
+        }
+    }
+
+
     const value = {
         aToken,setAToken,
         backendUrl, doctors,
-        getAllDoctors
+        getAllDoctors, changeAvailability, 
     }
 
 
